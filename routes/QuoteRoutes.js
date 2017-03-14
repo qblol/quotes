@@ -15,6 +15,11 @@ router.get('/random', QuoteController.random);
 /*
  * GET
  */
+router.post('/seed', QuoteController.seed);
+
+/*
+ * GET
+ */
 router.get('/:id', QuoteController.show);
 
 /*

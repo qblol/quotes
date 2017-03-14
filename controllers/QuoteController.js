@@ -78,6 +78,28 @@ module.exports = {
     },
 
     /**
+     * QuoteController.seed()
+     */
+    seed: function (req, res) {
+      QuoteModel.insertMany([{
+        content : "I hate imperialism. I detest colonialism. And I fear the consequences of their last bitter struggle for life. We are determined, that our nation, and the world as a whole, shall not be the play thing of one small corner of the world",
+        author  : "Soekarno"
+        },{
+        content : "Kalau suatu negara seperti Amerika mau menguasai samudra dan dunia, dia mesti rebut Indonesia lebih dahulu buat sendi kekuasaan.",
+        author  : "Tan Malaka"
+        },{
+        content : "Merah putih masih merayap gelisah mencari Hatta dalam jiwa dua ratus juta kita.",
+        author  : "Abdurahman Faiz"
+        },{
+        content : "Saya masih berpendapat bahwa Multatuli besar jasanya kepada bangsa Indonesia, karena dialah yang menyadarkan bangsa Indonesia bahwa mereka dijajah. Sebelumnya, di bawah pengaruh Jawanisme, kebanyakan orang Indonesia bahkan tidak merasa bahwa mereka dijajah.",
+        author  : "Pramoedya Ananta Toer"
+        },{
+        content : "Harus diingat, Indonesia adalah sebuah negara di mana sejak pertengahan 1960-an bahkan wacana ekonomi Islam memperlihatkan pengaruh gagasan-gagasan Marxis dan sosialis yang kukuh.",
+        author  : "Robert W. Hefner"
+      }]).then(res.send('berhasil seeding'))
+    },
+
+    /**
      * QuoteController.update()
      */
     update: function (req, res) {
