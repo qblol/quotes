@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var QuoteController = require('../controllers/QuoteController.js');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Quotes'});
-});
+router.get('/', QuoteController.random);
 
 module.exports = router;
